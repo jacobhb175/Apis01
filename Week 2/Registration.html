@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	</head>
+	<body>
+		Email: <input type = "text" id = "email" /><br/>
+		Password: <input type = "password" id = "password"><br/>
+		<button id = "register">Register</button><br/>
+		Email: <input type = "text" id = "inputEmail" /><br/>
+		Password: <input type = "password" id = "inputPassword"><br/>
+		<button id = "login">Login</button>
+	</body>
+</html>
+
+<script>
+	var email = $('#email').val();
+	var password = $('#password').val();
+	var blah = []
+	$("#register").click(function () {
+		if (email === "" || password === "") {
+			alert("PUT SOMETHING IN THE FRIGGIN' FIELDS")
+			alert("LIKE MAYBE COWS!")
+			alert("OR SHEEP")
+			alert("DO IT NOOOOOOOWWWWWWWWW")
+		} 
+		else {
+			alert("...you won this time. but we have allied with someone even stronger...THE THERMOMETERS!!!!!!!");
+			blah.push({email: email, password: password});
+			console.log("test");
+		}
+	});
+	
+	$("#login").click(function () {
+		for (var i = 0; i < blah.length; i++){
+			if (email === blah[i].email){
+				for (var j = 0; j < blah.length; j++){
+					if (password === blah[j].password){
+						alert("...the cows and sheep have teamed up to hunt you down.")
+					} 
+					else {
+						alert("YOU GOT A ERROR!!!! DEAL WITH IT!!!! THE COWS SAY SO! THE SHEEP AGREE")
+					}
+				}
+			}
+		}
+	});
+	
+</script>
